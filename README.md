@@ -3,8 +3,8 @@ A reference for all the stuff I work on
 
 ## Table of contents
 
-[Linux]
+[Linux](Contents/Linux)
 
-[MacOS]
+[MacOS](Contents/MacOS)
 
-[MySQL]
+[MySQL](Contents/MySQL)
