@@ -1,6 +1,6 @@
 # MySQL
 
-## Installazione
+## Installation
 
 CENTOS
 
