@@ -39,7 +39,5 @@
 ```
 
 
-[MacOs](/Contents/MacOS)
-[MySQL](/Contents/MySQL)
 
 Back to the [Table of Contents](/Contents)

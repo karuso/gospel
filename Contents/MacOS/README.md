@@ -1,10 +1,9 @@
-# gospel
-A reference for all the stuff I work on
+# MacOS
 
-## Table of contents
+DNS Flush
+```bash
+# sudo killall -HUP mDNSResponder
+```
 
-[Linux](Contents/Linux)
 
-[MacOS](Contents/MacOS)
-
-[MySQL](Contents/MySQL)
+Back to the [Table of Contents](/Contents)

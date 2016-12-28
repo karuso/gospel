@@ -1,10 +1,11 @@
-# gospel
-A reference for all the stuff I work on
+# Gospel
+A in progress reference for all the stuff I work on
 
 ## Table of contents
 
-[Linux](Contents/Linux)
+- [Linux](Contents/Linux)
+-- [Cron](Contents/Linux/Cron)
 
-[MacOS](Contents/MacOS)
+- [MacOS](Contents/MacOS)
 
-[MySQL](Contents/MySQL)
+- [MySQL](Contents/MySQL)
