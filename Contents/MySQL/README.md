@@ -69,4 +69,4 @@ DELETE n1 FROM names n1, names n2 WHERE n1.id > n2.id AND n1.name = n2.name
 ```
 
 
-Back to the [Table of Contents](/Contents)
+Back to the [Table of Contents](https://github.com/karuso/gospel#table-of-contents)

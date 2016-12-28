@@ -128,6 +128,7 @@ It is useful for those tasks which you want to run on your system startup. It wi
 @reboot /scripts/script.sh
 ```
 
+
 Back to the [Linux](/Contents/Linux)
 
-Back to the [Table of Contents](/Contents)
+Back to the [Table of Contents](https://github.com/karuso/gospel#table-of-contents)

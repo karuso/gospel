@@ -6,4 +6,4 @@ DNS Flush
 ```
 
 
-Back to the [Table of Contents](/Contents)
+Back to the [Table of Contents](https://github.com/karuso/gospel#table-of-contents)
