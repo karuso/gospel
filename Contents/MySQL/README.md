@@ -11,7 +11,7 @@ CENTOS
 
 ## Shortcuts
 
-Change root password (knowing the old)
+Change root password
 
     # mysqladmin -u root -p'old_password' password 'new_password'
 
@@ -68,5 +68,11 @@ Delete all duplicate rows except for one
 DELETE n1 FROM names n1, names n2 WHERE n1.id > n2.id AND n1.name = n2.name
 ```
 
+
+# Gotchas
+
+It's not a bug - it's a gotcha. A "gotcha" is a feature or function which works as advertised - but not as expected.
+
+[MySQL Gotchas](http://sql-info.de/mysql/gotchas.html)
 
 Back to the [Table of Contents](https://github.com/karuso/gospel#table-of-contents)
