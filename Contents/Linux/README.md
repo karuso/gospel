@@ -38,7 +38,7 @@
 # script >> /dev/null 2>&1
 ```
 
-# Remove ^M from file
+## Remove ^M from file
 ```bash
 for file in $(find /path/to/folder -type f); do
    tr -d '\r' <$file >temp.$$ && mv temp.$$ $file
