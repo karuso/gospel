@@ -3,11 +3,12 @@ A in progress reference for all the stuff I work on.
 
 ## Table of contents
 
-- [Linux](Contents/Linux)
-    - [Cron](Contents/Linux/Cron)
+- [Linux](Contents/Linux/README.md)
+    - [Cron](Contents/Linux/Cron/README.md)
+    - [Firewall](Contents/Linux/Firewall/README.md)
 
-- [MacOS](Contents/MacOS)
+- [MacOS](Contents/MacOS/README.md)
 
-- [MySQL](Contents/MySQL)
+- [MySQL](Contents/MySQL/README.md)
 
-- [NodeJS](Contents/NodeJS)
+- [NodeJS](Contents/NodeJS/README.md)
