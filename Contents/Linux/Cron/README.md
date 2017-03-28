@@ -129,8 +129,9 @@ It is useful for those tasks which you want to run on your system startup. It wi
 ```
 
 Run a cron as a specific user
+**ATT! edit /etc/crontab DON'T USE crontab -e BECAUSE IT WON'T WORK**
 ```
-*/5 * * * * www-data /path/to/script
+0 1 * * * www-data /path/to/script
 ```
 
 Back to the [Linux](/Contents/Linux)
