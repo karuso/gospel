@@ -1,0 +1,1307 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>body {
+    width: 65em;
+}</style><title>README</title></head><body><article class="markdown-body"><h1 id="linux-iptables-firewall"><a name="user-content-linux-iptables-firewall" href="#linux-iptables-firewall" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Linux Iptables Firewall</h1>
+<ul>
+<li><a href="#iptables-on-centos-7">Iptables on CentOS 7</a></li>
+<li><a href="#how-linux-firewall-work">How Linux Firewall Work</a><ul>
+<li><a href="#history">History</a></li>
+<li><a href="#types-of–packet-filtering-firewalls">Types of packet-filtering firewalls</a></li>
+<li><a href="#general-criteria–and-actions">General criteria and Actions</a></li>
+</ul>
+</li>
+<li><a href="#how-iptables-works">How Iptables works</a></li>
+<li><a href="#table-chains">Table Chains</a></li>
+<li><a href="#chain-policy">Chain Policy</a></li>
+<li><a href="#adding-iptables-rules">Adding iptables Rules</a></li>
+<li><a href="#iptables-rules-order">Iptables Rules Order</a></li>
+<li><a href="#list-iptables-rules">List iptables Rules</a></li>
+<li><a href="#deleting-rules">Deleting Rules</a></li>
+<li><a href="#replacing-rules">Replacing Rules</a></li>
+<li>Listing Specific Table</li>
+<li>Iptables User Defined Chain</li>
+<li>Redirection to a User Defined Chain</li>
+<li>Setting Default Policy for Chains</li>
+<li>Handling ICMP Traffic</li>
+<li>Blocking Bad Flags</li>
+<li>SYN Flooding</li>
+<li>Drop INVALID State Packets</li>
+<li>Drop Fragmented Packets</li>
+<li>Save iptables Rules</li>
+</ul>
+<h2 id="iptables-on-centos-7"><a name="user-content-iptables-on-centos-7" href="#iptables-on-centos-7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Iptables on CentOS 7</h2>
+<p>If you are using CentOS 7, you will find that firewalld was introduced to manage iptables, so if you want to go back to iptables you have to stop and mask firewalld.<br />
+<pre><code>$ systemctl stop firewalld
+$ systemctl mask firewalld
+</code></pre></p>
+<hr />
+<p>NOTE<br />
+firewalld is a replacement for iptables and improves the management of Linux security by enabling configuration changes without stopping the current connections.<br />
+Firewalld runs as a daemon that allows for rules to be added and changed instantly and it uses network zones to define a level of trust for any and all associated network connections.</p>
+<hr />
+<p>Install iptables service, enable and start it:<br />
+<pre><code>$ yum install iptables-services
+$ systemctl enable iptables
+$ systemctl start iptables
+</code></pre></p>
+<hr />
+<p>Note</p>
+<p>By default, the IPv4 policy in Red Hat Enterprise Linux kernels disables support for IP forwarding, which prevents boxes running Red Hat Enterprise Linux from functioning as dedicated edge routers. To enable IP forwarding, run the following command:<br />
+<pre><code>sysctl -w net.ipv4.ip_forward=1
+</code></pre><br />
+If this command is run via shell prompt, then the setting is not remembered after a reboot. You can permanently set forwarding by editing the /etc/sysctl.conf file. Find and edit the following line, replacing 0 with 1:<br />
+net.ipv4.ip_forward = 0<br />
+Execute the following command to enable the change to the sysctl.conf file:<br />
+<pre><code>sysctl -p /etc/sysctl.conf
+</code></pre></p>
+<hr />
+<h2 id="how-linux-firewall-works"><a name="user-content-how-linux-firewall-works" href="#how-linux-firewall-works" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How Linux Firewall Works</h2>
+<h4 id="history"><a name="user-content-history" href="#history" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>History</h4>
+<p>Iptables firewall functions are built on the Netfilter framework that exists in the Linux kernel. Netfilter was written by an awesome guy called Rusty Russell.<br />
+Netfilter allows Linux to perform packet filtering and shaping at a kernel level.</p>
+<h4 id="types-of-packet-filtering-firewalls"><a name="user-content-types-of-packet-filtering-firewalls" href="#types-of-packet-filtering-firewalls" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Types of packet-filtering firewalls</h4>
+<ul>
+<li>
+<p><strong>Stateless</strong> packet filtering firewall examines only the header of a packet for filtering.<br />
+It sees each packet in isolation and thus has no way to determine if a packet is part of an existing connection or not.</p>
+</li>
+<li>
+<p><strong>Stateful</strong> firewall keeps information about the status of the connections passing through it.<br />
+This allows the firewall to filter on the state of the connection, and this gives more control over the traffic.</p>
+</li>
+</ul>
+<h4 id="general-criteria-and-actions"><a name="user-content-general-criteria-and-actions" href="#general-criteria-and-actions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>General criteria and Actions</h4>
+<p>Netfilter works by referring to a set of tables which contain chains which contain individual rules.<br />
+If the current packet being processed satisfies the selection criteria of a rule, then the action specified by that rule is carried out.</p>
+<p>Any network connection between two hosts is a combination of:<br />
+- a <strong>source IP address</strong> and <strong>port</strong><br />
+- a <strong>destination IP address</strong> and <strong>port</strong><br />
+Iptables can use these values to filter traffic coming in and out of hosts, as well as protocol types.</p>
+<p>The actions that can be performed on the package are:<br />
+- <strong>ignore</strong><br />
+- <strong>accept</strong><br />
+- <strong>reject</strong><br />
+- pass onto other rules for more processing</p>
+<h2 id="how-iptables-works"><a name="user-content-how-iptables-works" href="#how-iptables-works" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How Iptables Works</h2>
+<h3 id="tables"><a name="user-content-tables" href="#tables" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tables</h3>
+<p>Netfilter has three built-in tables that can hold rules for processing:<br />
+- <strong>the Filter table</strong>, which is the default table used for all rules related to the filtering of your traffic.<br />
+- <strong>the Nat table</strong>, which handles NAT rules<br />
+- <strong>the Mangle table</strong>, which covers a variety of packet alteration functions</p>
+<h3 id="table-chains"><a name="user-content-table-chains" href="#table-chains" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Table Chains</h3>
+<p>The iptables rules are broken down into groups called chains. Each table contains default chains that are built into the table.<br />
+You can also create your own chains on each table to hold additional rules.</p>
+<p>The built-in chains in the filter table are:<br />
+- <strong>INPUT</strong> (a packet is coming to the host)<br />
+- <strong>OUTPUT</strong> (a packet is generated by the host itself and going out)<br />
+- <strong>FORWARD</strong> (a packet that have entered the host but is destined for some other host)</p>
+<h3 id="chain-policy"><a name="user-content-chain-policy" href="#chain-policy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Chain Policy</h3>
+<p>Each chain in the filter table has a policy. <strong>A policy is the default action taken</strong>.</p>
+<p>The policies you can use for packets are:<br />
+- <strong>ACCEPT</strong> (accept the traffic and allows it to pass through the firewall)<br />
+- <strong>DROP</strong> (discard a packet without notifying the sender)<br />
+- <strong>REJECT</strong> (discard the packet, but it sends an ICMP packet to the sender to tell him about the rejection)</p>
+<hr />
+<p>From a security perspective, you should deny all traffic by default and open the host to only the traffic to which you have explicitly granted access.<br />
+DROP for the INPUT and OUTPUT chains means incoming and outgoing traffic are not allowed unless you explicitly add rules to allow the traffic.</p>
+<hr />
+<h3 id="adding-iptables-rules"><a name="user-content-adding-iptables-rules" href="#adding-iptables-rules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Adding iptables Rules</h3>
+<p>To add a new rule, you can simply add one to a chain with the iptables command<br />
+<pre><code>$ iptables -A INPUT -i eth0 -p tcp --dport 80 -d 192.168.1.2 -j ACCEPT
+</code></pre></p>
+<ul>
+<li><code>–A</code> means we are adding a new rule.<br />
+By default, all new rules are added to the filter table unless you specify another table.</li>
+<li><code>-i</code> flag specifies which device the traffic will use to enter the host.<br />
+If you do not specify a device then iptables assumes the rule applies to all incoming network traffic from all devices.</li>
+<li><code>–p</code> flag specifies the protocol of the packets you are filtering, which is TCP in our case.</li>
+<li><code>–dport</code> flag tells iptables to select only packets destined for port 80.</li>
+<li><code>-d</code> selects only those packets destined for the specified IP address, 192.168.1.2.<br />
+If you do not specify a destination IP address, then iptables would apply this rule to all incoming traffic on eth0 regardless of IP address.</li>
+<li><code>-j</code>, specifies the action or the JUMP action to do, here we are accepting the packets using the accept policy.<br />
+The above rule allows incoming HTTP traffic which is on port 80.</li>
+</ul>
+<p>We can add another rule to allow HTTPS traffic which is on port 443.<br />
+<pre><code>$ iptables -A INPUT -i eth0 -p tcp --dport 443 -d 192.168.1.2 -j ACCEPT
+</code></pre></p>
+<p>Easy right? This time the only difference is the destined port, 443.</p>
+<p>Now we allow both HTTP and HTTPS, but this is only the incoming traffic, what about allowing outgoing traffic?</p>
+<pre><code>$ iptables -A OUTPUT -o eth0 -p tcp --sport 80 -j ACCEPT
+$ iptables -A OUTPUT -o eth0 -p tcp --sport 443 -j ACCEPT
+</code></pre>
+
+<p>You can replace the numeric port number on sport or dport with the service name like HTTP or HTTPS. These services names are defined in the /etc/services file, which makes reading rules easier.</p>
+<pre><code>$ iptables -A OUTPUT -o eth0 -p tcp --sport HTTP -j ACCEPT
+$ iptables -A OUTPUT -o eth0 -p tcp --sport HTTPS -j ACCEPT
+</code></pre>
+
+<h3 id="iptables-rules-order"><a name="user-content-iptables-rules-order" href="#iptables-rules-order" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Iptables Rules Order</h3>
+<p>When you use the <code>-A</code> flag to add a rule, it is appended to the end of the current rules in a chain. You can also add rules using the <code>-I</code> flag, which adds rules to the top of the chain of current rules.<br />
+<strong>The sequence of the rules matters</strong>.<br />
+The rules are checked in the order they are added.<br />
+With the <code>-I</code> flag you can also add a rule into a chain using a line number, so we can specify where exactly our rules placed.<br />
+<pre><code>$ iptables -I INPUT 1 -i eth0 -p tcp -j ACCEPT
+$ iptables -I INPUT 2 -i eth0 -p tcp --dport 80 -j DROP
+</code></pre></p>
+<p>The first rule accepts all TCP traffic comes to eth0, and the number 1 after the chain means you need to insert the rule in the first line of INPUT chain.<br />
+The second rule drops the traffic that enters port 80, and the number 2 after the chain means it is the second rule in the INPUT chain.</p>
+<p>ATTENTION: The first rule will accept all the traffic then the second rule will be ignored because the first rule already accepts all the traffic so the second rule here makes no sense.</p>
+<h3 id="list-iptables-rules"><a name="user-content-list-iptables-rules" href="#list-iptables-rules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>List iptables Rules</h3>
+<p>List the rules in a chain<br />
+<pre><code>$ iptables -L INPUT
+</code></pre></p>
+<p>Show the line numbers for rules<br />
+<pre><code>$ iptables -L INPUT --line-numbers
+</code></pre></p>
+<p>The list shows the services names, but you can show port numbers instead using <code>–n</code> option:<br />
+<pre><code>$ iptables -L INPUT -n --line-numbers
+</code></pre></p>
+<p>This makes the listing faster as it stops iptables that are waiting for DNS resolution and service lookups.<br />
+List all rules for all chains like this<br />
+<pre><code>$ iptables -L -n --line-numbers
+</code></pre></p>
+<p>Using <code>-v</code> flag you can see the associated counter that tracks how many bytes and packets have been processed by that rule<br />
+<pre><code>$ iptables -L -v
+</code></pre></p>
+<p>Also, you can reset the counters to zero using <code>-Z</code> flag.</p>
+<h3 id="deleting-rules"><a name="user-content-deleting-rules" href="#deleting-rules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Deleting Rules</h3>
+<p>Delete a rule<br />
+<pre><code>$ iptables -D INPUT -i eth0 -p tcp --dport https -d 192.168.1.2 -j ACCEPT
+</code></pre></p>
+<p><strong>NB You must match the exact specifications of the rule to be deleted otherwise the deletion will fail</strong>.</p>
+<p>You can delete the rule using the order number instead of writing the rule specifications.<br />
+<pre><code>$ iptables -D INPUT 2
+</code></pre></p>
+<p>You can delete all rules in a specific chain using the -F flag, which means flush all rules.<br />
+<pre><code>$ iptables -F INPUT
+</code></pre></p>
+<p><strong>ATTENTION: If you forget to mention the chain name when using the -F flag then all rules in all chains will be flushed</strong>.</p>
+<h3 id="replacing-rules"><a name="user-content-replacing-rules" href="#replacing-rules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Replacing Rules</h3>
+<p>You can replace existing rules with your own rule using the <code>-R</code> flag:<br />
+<pre><code>$ iptables -R INPUT 1 -i eth0 -p tcp --dport https -d 192.168.1.2 -j ACCEPT
+</code></pre></p>
+<p>This command will replace the first rule in the INPUT chain with the typed rule.</p>
+<h3 id="listing-specific-tables"><a name="user-content-listing-specific-tables" href="#listing-specific-tables" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Listing Specific Tables</h3>
+<p>You can specify the table using the -t flag:<br />
+<pre><code>$ iptables -L -t nat
+</code></pre></p>
+<p>Iptables User Defined Chain</p>
+<p>You can create a new chain using the -N flag:</p>
+<p>$ iptables -N MY_CHAIN</p>
+<p>Also, you can rename it using the -E flag:</p>
+<p>$ iptables -E MY_CHAIN NEW_NAME</p>
+<p>And you can delete the user-defined chain using the -X flag:</p>
+<p>$ iptables -X MY_CHAIN</p>
+<p>If you don’t mention the chain name when using the -X flag it will delete all user-defined chains.</p>
+<p>You can’t delete built-in chains like INPUT and OUTPUT.</p>
+<p>Redirection to User Defined Chain</p>
+<p>You can redirect packets to a user-defined chain like built-in chains using the -j flag.</p>
+<p>$ iptables -A INPUT -p icmp -j MY_CHAIN</p>
+<p>So all incoming ICMP traffic will be redirected to the newly created chain called MY_CHAIN.</p>
+<p>Setting Default Policy for Chains</p>
+<p>You can use the -p flag to set the default policy for a specific chain. The default policy could be ACCEPT, REJECT, and DROP.</p>
+<p>$ iptables -P INPUT DROP</p>
+<p>So now the input chain will drop any packet that comes through unless you write a rule to allow any incoming traffic.</p>
+<p>Handling ICMP Traffic</p>
+<p>ICMP provides error, control, and informational messages such as the messages used by the ping command. This is important for network troubleshooting and diagnostics but the attacker can do some malicious things with it, like:</p>
+<p>Sending a huge amount of ICMP packets that leads to consuming the available bandwidth resulting in a Denial of Service.<br />
+Sending forged ICMP echo packets to network broadcast addresses. The broadcast addresses reply with ICMP echo reply packets, resulting in a Denial of Service.<br />
+Sending an ICMP echo packet larger than the maximum IP packet size that may crash your system.<br />
+You can prevent all these attacks using iptables firewall.</p>
+<p>A good solution is all incoming ICMP traffic should be dropped except responses to outgoing connections. For example, all incoming ping (echo request) packets are dropped, but incoming ping reply (echo reply) packets that are in reply to pings generated on the local host are accepted.</p>
+<p>You want to create some chains to hold the ICMP-related rules.</p>
+<p>I will create two chains. The first one I have called is ICMP_IN, which handles the incoming ICMP traffic. The second one I will call is ICMP_OUT, which will handle outgoing ICMP traffic. User-created chains allow you to better structure your rules and allow you to group related rules that handle specific traffic types.</p>
+<p>Then we will redirect the traffic to those defined chains:</p>
+<p>Now when ICMP traffic is received by the INPUT chain, it is directed to the user-created chain ICMP_IN; and when it is received by the OUTPUT chain, it is handled by the ICMP_OUT chain.</p>
+<p>The ICMP Message Types are:</p>
+<p>0             Echo Reply</p>
+<p>3             Destination Unreachable</p>
+<p>4             Source Quench</p>
+<p>5             Redirect</p>
+<p>8             Echo Request</p>
+<p>11           Time Exceeded</p>
+<p>12           Parameter Problem</p>
+<p>13           Timestamp</p>
+<p>14           Timestamp Reply</p>
+<p>15           Information Request</p>
+<p>16           Information Reply</p>
+<p>The iptables rules can target individual ICMP messages types by selecting only ICMP traffic with the -p icmp flag in combination with the –icmp-type flag to select the particular ICMP message type.</p>
+<p>$ iptables -A ICMP_IN -p icmp &ndash;icmp-type 8 -j DROP</p>
+<p>Here we add our first rule to the ICMP_IN chain which will drop the echo request.</p>
+<p>Now we should write rules to allow inbound echo replies, and time exceeded and destination unreachable messages.</p>
+<p>Using the -m state allows you to perform state inspection and matching on the incoming packets, which is one of the key features of a stateful packet-filtering in iptables.</p>
+<p>There are four states: NEW, ESTABLISHED, RELATED, or INVALID.</p>
+<p>The NEW connection state indicates a freshly initiated connection.</p>
+<p>The ESTABLISHED connection state indicates an existing connection that is in the process of transferring data.</p>
+<p>The RELATED state refers to a connection that is used to facilitate another connection.</p>
+<p>The INVALID state refers to a connection that has been seen to have problems in processing packets.</p>
+<p>Back to our rules. It does not allow NEW connections using the ICMP to be made. This means attempts to ping this host will result in an error.</p>
+<p>Now you add the rules to take care of the outbound ICMP traffic in case you want to ping remote hosts.</p>
+<p>$ iptables -A ICMP_OUT -o eth0 -p icmp &ndash;icmp-type 8 -m state &ndash;state NEW -j ACCEPT</p>
+<p>We are not discussing how to disable ICMP packets here in specific, we are investigating how iptables firewall works. There are a lot of firewalls you can use that build upon iptables, so instead of using a ready-made product without understanding what&rsquo;s going on, you should be able to add your own rules, remove unnecessary ones, or modify existing rules to fit your needs.</p>
+<p>Blocking Bad Flags</p>
+<p>When a new TCP connection is created, a process that is commonly referred to as the three-way handshake occurs.</p>
+<p>You send an SYN TCP packet, then the receiver sends as a response SYN ACK packet back to you, and then you send an ACK to it. This is the complete three-way handshake.</p>
+<p>You can use iptables to select packets with particular TCP flags using the –tcp-flags flag.</p>
+<p>$ iptables -A INPUT -p tcp &ndash;tcp-flags ALL SYN -j DROP</p>
+<p>This rule is telling you to look at all TCP flags (SYN, ACK, FIN, RST, URG, and PSH) and match the packets that have the flag SYN set.</p>
+<p>There are some combinations of flags that you want to block with your iptables firewall. These flags are not actually attacks, but rather more likely to be attempted by attackers to determine more information about your server using tools like nmap.</p>
+<p>Some of the well-known bad flag combinations are SYN/FIN, which is used by a variety of network scanners to perform operating system detection.</p>
+<p>I will start by adding a chain to hold the bad TCP flag rules.</p>
+<p>$ iptables -N BAD_FLAGS</p>
+<p>Then we will redirect all TCP traffic to the bad TCP flags rules to be processed.</p>
+<p>$ iptables -A INPUT -p tcp -j BAD_FLAGS</p>
+<p>When traffic is redirected to a user-defined chain by a rule, it will be processed against all the rules in the new chain and then return to the chain that redirected it to be processed by the next rule in the sequence. So all traffic comes to the BAD_FLAGS chain and then returns it to the INPUT chain.</p>
+<p>$ iptables -A BAD_FLAGS -p tcp &ndash;tcp-flags SYN,FIN SYN,FIN -j DROP</p>
+<p>Other variations on the SYN/FIN flag combination are used for similar purposes.</p>
+<p>SYN/RST, SYN/FIN/PSH, SYN/FIN/RST, and SYN/FIN/RST/PSH</p>
+<p>We can add rules for those combinations too:</p>
+<p>Cool!!</p>
+<p>Also, we can’t find in normal TCP/IP connections single FIN flag packets, so we can add a rule for that:</p>
+<p>$ iptables -A BAD_FLAGS -p tcp &ndash;tcp-flags FIN FIN -j DROP</p>
+<p>We should also drop null packets. These are generally used for other forms of network probing used by scanning tools such as nmap</p>
+<p>SYN Flooding</p>
+<p>The attacker sends a packet with the SYN flag. The receiving host replies with a packet with the SYN/ACK flags. The attacker is not sending an ACK to complete the handshake and that leaves a fully open connection till the connection reaches timeout.</p>
+<p>The attacker sends SYN flags and as a result, the receiving host would have many opened connections.</p>
+<p>We can use the limit module of iptables firewall to reduce the risk of this sort of attack.</p>
+<p>$ iptables -A INPUT -p tcp -m limit &ndash;limit 10/second -j LOG</p>
+<p>This command logs the tcp packets and limits the logging to ten entries per second.</p>
+<p>With the same concept, we can limit the number of incoming SYN packets.</p>
+<p>$ iptables -A INPUT -i eth0 -p tcp &ndash;syn -m limit &ndash;limit 10/second -jACCEPT</p>
+<p>Here we used the special TCP option –syn, which matches all packets with the ACK and RST bits cleared and the SYN flag set. This is the same as –tcp-flags SYN,RST,ACK SYN.</p>
+<p>We have limited the number of incoming SYN packets to ten per second. On a busy system, this can cause bottlenecking so this value depends on your network and performance.</p>
+<p>If this will throttle your network you can use SYN cookies.</p>
+<p>Go into the  /etc/sysctl.conf   file and add this line:</p>
+<p>net.ipv4.tcp_syncookies = 1</p>
+<p>Then save and reload:</p>
+<p>$ sysctl -p</p>
+<p>Drop INVALID State Packets</p>
+<p>The INVALID state is not associated with any known connection. This means any incoming packets in the INVALID state are not from connections on the host and should be dropped. For example:</p>
+<p>$ iptables -A INPUT -m state &ndash;state INVALID -j DROP</p>
+<p>This rule will cover all incoming packets on all interfaces, and log and drop them.</p>
+<p>Drop Fragmented Packets</p>
+<p>Packet fragments occur when a packet is too large to be sent in one piece. The packet is broken up into fragments that are then reassembled on the receiving host.</p>
+<p>The -f flag tells iptables firewall to select all fragments. So if you are not using iptables as a router, you can drop fragmented packets.</p>
+<p>$ iptables -A INPUT -f -j DROP</p>
+<p>Save iptables Rules</p>
+<p>All the rules we discussed will be lost if you reboot your server, so how can you save them?</p>
+<p>You can save all of your rules using iptables-save command if you are using CentOS or Red Hat.</p>
+<p>$ iptables-save</p>
+<p>You can save specific table like filter table only:</p>
+<p>$ iptables-save -t filter</p>
+<p>Also, you can use iptables-restore to restore rules that were saved.</p></article></body></html>

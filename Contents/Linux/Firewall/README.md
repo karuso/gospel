@@ -44,6 +44,21 @@ $ systemctl enable iptables
 $ systemctl start iptables
 ```
 
+---
+NOTE
+
+By default, the IPv4 policy in Red Hat Enterprise Linux kernels disables support for IP forwarding, which prevents boxes running Red Hat Enterprise Linux from functioning as dedicated edge routers. To enable IP forwarding, run the following command:
+```
+sysctl -w net.ipv4.ip_forward=1
+```
+If this command is run via shell prompt, then the setting is not remembered after a reboot. You can permanently set forwarding by editing the /etc/sysctl.conf file. Find and edit the following line, replacing 0 with 1 or add it if missing:
+net.ipv4.ip_forward = 0
+Execute the following command to enable the change to the sysctl.conf file:
+```
+sysctl -p /etc/sysctl.conf
+```
+---
+
 ## How Linux Firewall Works
 
 #### History
