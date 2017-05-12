@@ -3,7 +3,7 @@
 - [Installation](#installation)
     - [CentOS](#centos)
     - [Secure Installation](#secure-installation)
-- [Users](#users)
+- [Users Management](#users-management)
 - [Stored Functions](#stored-functions)
 - [Views](#views)
 - [Triggers](#triggers)
@@ -29,7 +29,7 @@
     delete test database
 ```
 
-## Users
+## Users Management
 
 Creating a New User Account (and granting privileges)
 ```

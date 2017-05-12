@@ -1021,19 +1021,118 @@ body .markdown-body
 <ul>
 <li><a href="#installation">Installation</a><ul>
 <li><a href="#centos">CentOS</a></li>
+<li><a href="#secure-installation">Secure Installation</a></li>
 </ul>
 </li>
+<li><a href="#users-management">Users Management</a></li>
+<li><a href="#stored-functions">Stored Functions</a></li>
+<li><a href="#views">Views</a></li>
+<li><a href="#triggers">Triggers</a></li>
 <li><a href="#shortcuts">Shortcuts</a></li>
-<li><a href="#Common mysql prompt sequences">Common mysql prompt sequences</a></li>
+<li><a href="#common-mysql-prompt-sequences">Common mysql prompt sequences</a></li>
 <li><a href="#useful-clients">Useful Clients</a></li>
 <li><a href="#gotchas">Gotchas</a></li>
 </ul>
 <h2 id="installation"><a name="user-content-installation" href="#installation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h2>
 <h3 id="centos"><a name="user-content-centos" href="#centos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CentOS</h3>
 <pre><code># yum install gcc mysql-devel python-devel openssl-devel
-# pip install MySQL-python==1.2.5
+# pip install MySQL-python==1.2.5 (only for python scripts)
 </code></pre>
 
+<h3 id="secure-installation"><a name="user-content-secure-installation" href="#secure-installation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Secure Installation</h3>
+<pre><code># mysql_secure_installation
+    create root password
+    disable root from outside localhost
+    disable anonymous user
+    delete test database
+</code></pre>
+
+<h2 id="users-management"><a name="user-content-users-management" href="#users-management" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Users Management</h2>
+<p>Creating a New User Account (and granting privileges)<br />
+<pre><code>mysql&gt; GRANT &lt;privileges&gt; ON database_name.* TO jason@192.168.1.145 IDENTIFIED BY  password;
+</code></pre></p>
+<p>Deleting a User Account<br />
+<pre><code>mysql&gt; REVOKE ALL PRIVILEGES FROM jason@192.168.1.145; (to revoke privileges)
+mysql&gt; DROP USER jason@192.168.1.145; (to actually delete the user)
+</code></pre></p>
+<p>Changing a Password<br />
+<pre><code>mysql&gt; SET PASSWORD FOR jason@192.168.1.145 = PASSWORD(supersecret);
+</code></pre></p>
+<p>Granting Additional Privileges<br />
+<pre><code>mysql&gt; GRANT DELETE ON dzone.* TO jason@192.168.1.145;
+</code></pre></p>
+<p>Revoking Privileges<br />
+<pre><code>mysql&gt; REVOKE DELETE, UPDATE FROM jason@192.168.1.145;
+</code></pre></p>
+<p>Granting Table- and Column-specific Privileges<br />
+<pre><code>mysql&gt;GRANT INSERT ON dzone.timesheets TO jason@192.168.1.145;
+mysql&gt;GRANT INSERT (hours), SELECT (hours) ON dzone.timesheets TO jason@192.168.1.145;
+</code></pre></p>
+<p>Renaming Users<br />
+<pre><code>mysql&gt; RENAME USER jason@192.168.1.145 TO wjg@192.168.1.145;
+</code></pre></p>
+<h2 id="stored-functions"><a name="user-content-stored-functions" href="#stored-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Stored Functions</h2>
+<p>Creating a Stored Function and Use it<br />
+<pre><code>mysql&gt; DELIMITER $$
+mysql&gt; CREATE FUNCTION calculate_bonus
+-&gt;(employee_id INTEGER) RETURNS DECIMAL(5,2)
+-&gt;BEGIN
+-&gt;DECLARE article_count INTEGER;
+-&gt;DECLARE bonus DECIMAL(10,2);
+-&gt;SELECT count(id) AS article_count FROM articles
+-&gt;WHERE author_id = employee_id;
+-&gt;SET bonus = article_count * 10;
+-&gt;RETURN bonus;
+-&gt;END;
+-&gt;$$
+mysql&gt; DELIMITER ;
+
+mysql&gt; SELECT name, phone, calculate_bonus(id) FROM authors;
+</code></pre></p>
+<p>Altering a Stored Function<br />
+<pre><code>mysql&gt; DELIMITER $$
+mysql&gt; ALTER FUNCTION calculate_bonus
+-&gt;MODIFIED FUNCTION BODY...
+-&gt;$$
+mysql&gt; DELIMITER $$
+</code></pre></p>
+<p>Deleting a Stored Function<br />
+<pre><code>mysql&gt; DROP FUNCTION calculate_bonus;
+</code></pre></p>
+<h2 id="views"><a name="user-content-views" href="#views" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Views</h2>
+<p>Creating a View<br />
+<pre><code>mysql&gt; CREATE VIEW author_view AS
+-&gt;SELECT name, e-mail, phone FROM authors ORDER BY email ASC;
+
+mysql&gt; SELECT * FROM author_view;
+</code></pre></p>
+<p>Passing Query Parameters<br />
+<pre><code>mysql&gt; SELECT * FROM author_view WHERE email =  jason@example.com ;
+</code></pre></p>
+<p>Viewing a View<br />
+<pre><code>mysql&gt; DESCRIBE author_view; to examine the columns retrieved by the view
+
+mysql&gt; SHOW CREATE VIEW author_view; to view the view syntax
+</code></pre></p>
+<p>Modifying a View<br />
+<pre><code>mysql&gt; ALTER VIEW author_view AS
+-&gt;SELECT name, phone FROM authors ORDER BY phone;
+</code></pre></p>
+<h2 id="triggers"><a name="user-content-triggers" href="#triggers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Triggers</h2>
+<p>Creating a Trigger<br />
+<pre><code>mysql&gt; DELIMITER $$
+mysql&gt; CREATE TRIGGER article_counter
+-&gt;AFTER INSERT ON articles
+-&gt;FOR EACH ROW BEGIN
+-&gt;UPDATE categories SET counter = counter + 1 WHERE id = NEW.category_id; -&gt;END;
+-&gt;$$
+mysql&gt; DELIMITER ;
+</code></pre></p>
+<p>Modifying a Trigger<br />
+You currently cannot modify an existing trigger from within the mysql client. Instead, you should delete the existing trigger and create it anew with the desired changes incorporated.</p>
+<p>Deleting a Trigger<br />
+<pre><code>mysql&gt; DROP TRIGGER pay_author;
+</code></pre></p>
 <h2 id="shortcuts"><a name="user-content-shortcuts" href="#shortcuts" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Shortcuts</h2>
 <p>Change root password<br />
 <pre><code># mysqladmin -u root -p'old_password' password 'new_password'
@@ -1077,14 +1176,15 @@ SET FOREIGN_KEY_CHECKS = 1;
 <pre><code class="sql">DELETE n1 FROM names n1, names n2 WHERE n1.id &gt; n2.id AND n1.name = n2.name
 </code></pre></p>
 <h2 id="common-mysql-prompt-sequences"><a name="user-content-common-mysql-prompt-sequences" href="#common-mysql-prompt-sequences" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Common mysql prompt sequences</h2>
-<p>\c  A counter that tracks the total number of issued session commands<br />
-\d  The current database<br />
-\D  The current date<br />
-\h  The server host<br />
-\u  Your username<br />
-\U  Your username@hostname<br />
-mysql&gt;prompt mysql (\U - \d)&gt;<br />
-mysql (root@localhost - database)&gt;</p>
+<p><code>\c</code>  A counter that tracks the total number of issued session commands<br />
+<code>\d</code>  The current database<br />
+<code>\D</code>  The current date<br />
+<code>\h</code>  The server host<br />
+<code>\u</code>  Your username<br />
+<code>\U</code>  Your username@hostname<br />
+<pre><code>mysql&gt; prompt mysql (\U - \d)&gt;
+mysql (root@localhost - database)&gt;
+</code></pre></p>
 <h2 id="useful-clients"><a name="user-content-useful-clients" href="#useful-clients" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Useful Clients</h2>
 <pre><code>my_print_defaults           Outputs the options defined in the my.cnf files.
 myisamchk                   Aids in the review, repair, and optimization of MyISAM-defined tables.
