@@ -128,6 +128,11 @@ It is useful for those tasks which you want to run on your system startup. It wi
 @reboot /scripts/script.sh
 ```
 
+Run a cron as a specific user
+**ATT! edit /etc/crontab DON'T USE crontab -e BECAUSE IT WON'T WORK**
+```
+0 1 * * * www-data /path/to/script
+```
 
 Back to the [Linux](/Contents/Linux)
 
