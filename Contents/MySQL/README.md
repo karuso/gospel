@@ -11,6 +11,7 @@
 - [Common mysql prompt sequences](#common-mysql-prompt-sequences)
 - [Useful Clients](#useful-clients)
 - [Gotchas](#gotchas)
+- [Other useful commands](#other-useful-commands)
 
 ## Installation
 
@@ -209,12 +210,16 @@ DELETE n1 FROM names n1, names n2 WHERE n1.id > n2.id AND n1.name = n2.name
 ```
 
 ## Common mysql prompt sequences
+
+```
 `\c`  A counter that tracks the total number of issued session commands
 `\d`  The current database
 `\D`  The current date
 `\h`  The server host
 `\u`  Your username
 `\U`  Your username@hostname
+```
+
 ```
 mysql> prompt mysql (\U - \d)>
 mysql (root@localhost - database)>
@@ -251,4 +256,14 @@ It's not a bug - it's a gotcha. A "gotcha" is a feature or function which works 
 
 [MySQL Gotchas](http://sql-info.de/mysql/gotchas.html)
 
+
+## Other useful commands
+
+Change table character set
+```
+mysql> ALTER TABLE tbl_name CONVERT TO CHARACTER SET utf8;
+```
+
+
 Back to the [Table of Contents](https://github.com/karuso/gospel#table-of-contents)
+
