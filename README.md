@@ -4,6 +4,7 @@ A in progress reference for all the stuff I work on.
 ## Table of contents
 
 - [Linux](Contents/Linux/README.md)
+    - [Commands](Contents/Linux/Commands/README.md)
     - [Cron](Contents/Linux/Cron/README.md)
     - [Firewall](Contents/Linux/Firewall/README.md)
 
